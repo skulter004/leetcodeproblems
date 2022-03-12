@@ -1,13 +1,14 @@
 #include<iostream>
 using namespace std;
 int sqroot(int num){
-    int n=num/2;
+    int n=num;
     int s=1;int e=n;
     int mid=0;
 
     while(s<=e){
-        mid = (s+e)/2;
-        if(mid * mid==num){
+
+        int sqr = mid*mid;
+        if(sqr==num){
             return mid;
         }
         else if(mid*mid>num){
@@ -17,6 +18,7 @@ int sqroot(int num){
         {
           s=mid+1;
         }
+         mid = (s+e)/2;
       
             }
             return mid;
